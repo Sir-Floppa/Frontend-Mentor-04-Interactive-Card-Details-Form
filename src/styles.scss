@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  color: hsl(278, 68%, 11%);
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("/assets/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
