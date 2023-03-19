@@ -1,30 +1,44 @@
 <form method="POST">
   <div class="field">
     <label for="cardholderName">Cardholder Name</label>
-    <input type="text" id="cardholderName" name="cardholderName" placeholder="e.g. Jane Appleseed"/>
+    <input
+      type="text"
+      id="cardholderName"
+      name="cardholderName"
+      placeholder="e.g. Jane Appleseed"
+      required
+    />
   </div>
 
   <div class="field">
     <label for="cardNumber">Card Number</label>
-    <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000"/>
+    <input
+      [(ngModel)]="cardNumber"
+      (keyup)="formatCardNumber($event)"
+      type="text"
+      id="cardNumber"
+      name="cardNumber"
+      placeholder="e.g. 1234 5678 9123 0000"
+      required
+      maxlength="15"
+      minlength="12"
+    />
   </div>
 
   <div class="row">
     <div class="field">
       <label for="expMonth">Exp. Date (MM/YY)</label>
-      <div>
-        <input type="text" id="expMonth" name="expMonth" placeholder="MM"/>
-        <input type="text" id="expYear" name="expYear" placeholder="YY"/>
+      <div class="dateFields">
+        <input type="text" id="expMonth" name="expMonth" placeholder="MM" />
+        <input type="text" id="expYear" name="expYear" placeholder="YY" />
       </div>
     </div>
-  
+
     <div class="field">
       <label for="cvc">CVC</label>
-      <input type="text" id="cvc" name="cvc" placeholder="e.g. 123"/>
+      <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
     </div>
   </div>
 
-  <button type="submit">
-    Confirm
-  </button>
+  <button type="submit">Confirm</button>
 </form>
