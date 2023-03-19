@@ -20,6 +20,7 @@
       name="cardNumber"
       placeholder="e.g. 1234 5678 9123 0000"
       required
+      pattern="\d{4} \d{4} \d{4} \d{4}"
       maxlength="19"
       minlength="19"
     />
@@ -31,7 +32,7 @@
       <div class="dateFields">
         <input
           [(ngModel)]="expMonth"
-          (change)="formatExpMonth()"
+          (blur)="formatExpMonth()"
           type="text"
           id="expMonth"
           name="expMonth"
@@ -57,15 +58,19 @@
     <div class="field">
       <label for="cvc">CVC</label>
       <input
-        type="number"
+        (keyup)="formatCVC()"
+        [(ngModel)]="cvc"
+        minlength="3"
+        maxlength="3"
+        pattern="\d{3}"
+        type="text"
         id="cvc"
         name="cvc"
         placeholder="e.g. 123"
-        min="100"
         required
       />
     </div>
   </div>
 
-  <button type="submit">Confirm</button>
+  <button>Confirm</button>
 </form>
