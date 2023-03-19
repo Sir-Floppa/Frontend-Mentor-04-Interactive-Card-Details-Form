@@ -14,14 +14,14 @@
     <label for="cardNumber">Card Number</label>
     <input
       [(ngModel)]="cardNumber"
-      (keyup)="formatCardNumber($event)"
+      (keyup)="formatCardNumber()"
       type="text"
       id="cardNumber"
       name="cardNumber"
       placeholder="e.g. 1234 5678 9123 0000"
       required
-      maxlength="15"
-      minlength="12"
+      maxlength="19"
+      minlength="19"
     />
   </div>
 
@@ -29,14 +29,32 @@
     <div class="field">
       <label for="expMonth">Exp. Date (MM/YY)</label>
       <div class="dateFields">
-        <input type="text" id="expMonth" name="expMonth" placeholder="MM" />
-        <input type="text" id="expYear" name="expYear" placeholder="YY" />
+        <input
+          [(ngModel)]="expMonth"
+          (change)="formatExpMonth()"
+          type="text"
+          id="expMonth"
+          name="expMonth"
+          placeholder="MM"
+          minlength="2"
+          maxlength="2"
+        />
+        <input
+          [(ngModel)]="expYear"
+          (change)="formatExpYear()"
+          minlength="2"
+          maxlength="2"
+          type="text"
+          id="expYear"
+          name="expYear"
+          placeholder="YY"
+        />
       </div>
     </div>
 
     <div class="field">
       <label for="cvc">CVC</label>
-      <input type="text" id="cvc" name="cvc" placeholder="e.g. 123" />
+      <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" min="100"/>
     </div>
   </div>
 
