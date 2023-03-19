@@ -38,6 +38,7 @@
           placeholder="MM"
           minlength="2"
           maxlength="2"
+          required
         />
         <input
           [(ngModel)]="expYear"
@@ -48,13 +49,21 @@
           id="expYear"
           name="expYear"
           placeholder="YY"
+          required
         />
       </div>
     </div>
 
     <div class="field">
       <label for="cvc">CVC</label>
-      <input type="number" id="cvc" name="cvc" placeholder="e.g. 123" min="100"/>
+      <input
+        type="number"
+        id="cvc"
+        name="cvc"
+        placeholder="e.g. 123"
+        min="100"
+        required
+      />
     </div>
   </div>
 

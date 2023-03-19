@@ -6,19 +6,19 @@ form {
 }
 
 form * {
-  width: 100%
+  width: 100%;
 }
 
 label {
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 input {
   height: 3rem;
+  border: 0.125rem solid hsl(270, 3%, 87%);
   padding: 0.75rem;
-  border: 2px solid hsl(270, 3%, 87%);
   border-radius: 0.5rem;
   font-size: 18px;
 }
@@ -28,9 +28,27 @@ input::placeholder {
   text-align: left;
 }
 
+input:focus {
+  border: 0.125rem double transparent;
+  border-radius: 0.5rem;
+  background-image: 
+    linear-gradient(white, white),
+    linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip:  padding-box, border-box;
+  outline: none;
+}
+
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   display: none;
+}
+
+// input:required:invalid {
+//   border: 1px solid hsl(0, 100%, 66%)
+// }
+
+input {
 }
 
 button {
@@ -47,7 +65,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .row {
@@ -59,14 +77,15 @@ button {
 .dateField {
   display: flex;
   justify-content: flex-start;
-  gap: 25rem
+  gap: 25rem;
 }
 
-#expMonth, #expYear {
+#expMonth,
+#expYear {
   width: 5rem;
   text-align: center;
 }
 
 #expYear {
-  margin-left: .75rem;
+  margin-left: 0.75rem;
 }
