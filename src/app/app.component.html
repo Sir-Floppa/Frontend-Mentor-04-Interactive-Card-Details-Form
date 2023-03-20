@@ -1,6 +1,6 @@
 <main>
   <section>
-    <app-card-front></app-card-front>
+    <app-card-front [card]="card"></app-card-front>
   </section>
-  <router-outlet></router-outlet>
+  <router-outlet (cardEmitter)="setCard($any($event))"></router-outlet>
 </main>

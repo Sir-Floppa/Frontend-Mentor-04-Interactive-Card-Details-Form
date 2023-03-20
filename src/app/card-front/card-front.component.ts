@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Card } from '../card';
 
 @Component({
   selector: 'app-card-front',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-front.component.scss']
 })
 export class CardFrontComponent {
-
+  @Input() card: Card;
 }

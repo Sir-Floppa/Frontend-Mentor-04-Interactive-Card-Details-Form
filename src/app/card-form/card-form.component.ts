@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Card } from '../card';
 
 @Component({
   selector: 'app-card-form',
@@ -7,12 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardFormComponent implements OnInit {
   ngOnInit(): void {
-    document.querySelectorAll('input').forEach((input) => {
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach((input) => {
       input.addEventListener('blur', (e: Event) => {
         (<HTMLFormElement>e.target).classList.add('invalid');
-      })
+      });
     });
+
+    inputs.forEach(input => input.addEventListener('keyup', this.emitCard))
   }
+
+  // * Outputs card data
+  @Output() cardEmitter = new EventEmitter<Card>();
+
+  public emitCard = () => {
+    const value = {
+      cardholder: this.cardholderName,
+      cardNumber: this.cardNumber,
+      expMonth: this.expMonth,
+      expYear: this.expYear,
+      cvc: this.cvc,
+    }
+    // TODO Agregar servicio para enviar el valor a app component
+    this.cardEmitter.emit(value);
+  };
 
   // * Regex for validation and formating
   private nonNumberRegex: RegExp = /[\D]/g;
@@ -62,7 +81,7 @@ export class CardFormComponent implements OnInit {
 
   public formatCVC = () => {
     this.cvc = this.removeNonDigits(this.cvc);
-  }
+  };
 
   private removeNonDigits = (str: string) => {
     const notNumbers = str.match(this.nonNumberRegex);

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Card } from './card';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = '04-Interactive-Card-Details-Form';
+
+  card: Card;
+
+  setCard(card: Card) {
+    console.log(card);
+    this.card = card;
+  }
 }
