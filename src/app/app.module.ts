@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardFormComponent } from './card-form/card-form.component';
 import { CardFrontComponent } from './card-front/card-front.component';
+import { CreditCardNumberPipe } from './credit-card-number.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardFormComponent,
-    CardFrontComponent
+    CardFrontComponent,
+    CreditCardNumberPipe
   ],
   imports: [
     BrowserModule,
