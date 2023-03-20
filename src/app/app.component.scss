@@ -1,7 +1,12 @@
-main {
+main, section {
   width: 85%;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
+}
+
+section {
+  flex-direction: column;
+  gap: 1.5rem;
 }
