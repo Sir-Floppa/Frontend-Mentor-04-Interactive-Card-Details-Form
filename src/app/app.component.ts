@@ -11,11 +11,11 @@ export class AppComponent {
 
   constructor(private cardData: CardDataService) { 
     cardData.changeEmitted$.subscribe(value => {
-      this.card.cardholder = value.cardholder ? value.cardholder: this.card.cardholder;
-      this.card.cardNumber = value.cardNumber ? value.cardNumber: this.card.cardNumber;
-      this.card.expMonth = value.expMonth ? value.expMonth: this.card.expMonth;
-      this.card.expYear = value.expYear ? value.expYear: this.card.expYear;
-      this.card.cvc = value.cvc ? value.cvc: this.card.cvc;
+      this.card.cardholder = value.cardholder ? value.cardholder: 'Jane Appleseed';
+      this.card.cardNumber = value.cardNumber ? value.cardNumber: '0000 0000 0000 0000';
+      this.card.expMonth = value.expMonth ? value.expMonth: '00';
+      this.card.expYear = value.expYear ? value.expYear: '00';
+      this.card.cvc = value.cvc ? value.cvc: '123';
     })
   }
 

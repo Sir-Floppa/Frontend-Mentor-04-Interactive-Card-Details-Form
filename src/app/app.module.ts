@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CardFormComponent } from './card-form/card-form.component';
 import { CardFrontComponent } from './card-front/card-front.component';
 import { CreditCardNumberPipe } from './credit-card-number.pipe';
+import { CardBackComponent } from './card-back/card-back.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardFormComponent,
     CardFrontComponent,
-    CreditCardNumberPipe
+    CreditCardNumberPipe,
+    CardBackComponent
   ],
   imports: [
     BrowserModule,
