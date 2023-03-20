@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Card } from '../card';
+import { CardDataService } from '../card-data.service';
 
 @Component({
   selector: 'app-card-form',
@@ -7,6 +8,8 @@ import { Card } from '../card';
   styleUrls: ['./card-form.component.scss'],
 })
 export class CardFormComponent implements OnInit {
+  constructor(private cardData: CardDataService) { }
+
   ngOnInit(): void {
     const inputs = document.querySelectorAll('input');
     inputs.forEach((input) => {
@@ -29,8 +32,8 @@ export class CardFormComponent implements OnInit {
       expYear: this.expYear,
       cvc: this.cvc,
     }
-    // TODO Agregar servicio para enviar el valor a app component
-    this.cardEmitter.emit(value);
+    
+    this.cardData.emitChange(value)
   };
 
   // * Regex for validation and formating

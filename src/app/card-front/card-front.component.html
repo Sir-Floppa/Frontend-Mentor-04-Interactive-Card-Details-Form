@@ -1,12 +1,11 @@
 <main>
-  <img src="/assets/images/card-logo.svg" alt="Card Logo">
+  <img src="/assets/images/card-logo.svg" alt="Card Logo" />
   <div>
-    <p id="cardNumber">0000 0000 0000 0000</p>
+    <p id="cardNumber">{{ card.cardNumber }}</p>
 
-    {{ card }}
     <span>
-      <p>Jane Appleseed</p>
-      <p>00/00</p>
+      <p>{{ card.cardholder }}</p>
+      <p>{{ card.expMonth }}/{{ card.expYear }}</p>
     </span>
   </div>
 </main>

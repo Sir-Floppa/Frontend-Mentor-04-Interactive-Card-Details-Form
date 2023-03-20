@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Card } from './card';
+import { CardDataService } from './card-data.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,9 @@ import { Card } from './card';
 })
 export class AppComponent {
 
-  card: Card;
-
-  setCard(card: Card) {
-    console.log(card);
-    this.card = card;
+  constructor(private cardData: CardDataService) { 
+    cardData.changeEmitted$.subscribe(value => this.card = value)
   }
+
+  card: Card;
 }
