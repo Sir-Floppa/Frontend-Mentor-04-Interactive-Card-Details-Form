@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/interactive-card-details-form-O3mQyGLgPP)
+- Live Site URL: [Github Page](https://sir-floppa.github.io/Frontend-Mentor-04-Interactive-Card-Details-Form/#/card-form)
 
 ## My process
 
