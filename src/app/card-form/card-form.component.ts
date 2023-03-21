@@ -19,6 +19,14 @@ export class CardFormComponent implements OnInit {
     });
 
     inputs.forEach(input => input.addEventListener('keyup', this.emitCard))
+
+    const expFields = document.querySelectorAll('#expMonth, #expYear');
+    expFields.forEach(field => {
+      field.addEventListener('keyup', (e: Event) => {
+        const element = <HTMLFormElement>e.target;
+        element['value'] = this.removeNonDigits(element['value']);
+      })
+    })
   }
 
   // * Outputs card data
