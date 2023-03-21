@@ -12,7 +12,7 @@ form * {
 label {
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 input {
@@ -65,7 +65,7 @@ input::-webkit-outer-spin-button {
 
 #expMonth,
 #expYear {
-  width: 5rem;
+  width: 40%;
   text-align: center;
 }
 

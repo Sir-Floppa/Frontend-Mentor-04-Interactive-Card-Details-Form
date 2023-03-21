@@ -1,3 +1,4 @@
+
 main, section {
   height: 100vh;
   display: flex;
@@ -8,22 +9,57 @@ main, section {
 main {
   justify-self: center;
   width: 100%;
-  justify-content: space-evenly;
 }
 
 section {
   flex-direction: column;
   gap: 1.5rem;
-  width: 30%;
 }
 
 app-card-front {
   align-self: flex-start;
 }
+
 app-card-back {
   align-self: flex-end;
 }
 
 app-card-front, app-card-back {
   filter: drop-shadow(0 0 2rem rgba(0, 0, 0, 0.25));
+}
+
+@media (max-width: 1100px) {
+  main, section {
+    width: 100%;
+    height: 100%;
+  }
+  
+  main {
+    min-width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+  
+  section {
+    flex-direction: column-reverse;
+  }
+
+  app-card-front, app-card-back {
+    scale: 65%;
+    margin-right: -7.5vw;
+    margin-left: -7.5vw;
+    align-self: center;
+  }
+
+  app-card-front {
+    z-index: 1;
+    margin-top: -11.875rem;
+    margin-right: 7.5%;
+  }
+
+  app-card-back {
+    margin-left: 7.5%
+  }
 }
