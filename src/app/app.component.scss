@@ -2,18 +2,16 @@
 main, section {
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
-}
-
-main {
-  justify-self: center;
-  width: 100%;
 }
 
 section {
   flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
+  width: 30%;
 }
 
 app-card-front {
