@@ -88,7 +88,7 @@ button {
   border: 0.125rem solid hsl(0, 100%, 66%);
 }
 
-.field:has(input.invalid)::after {
+.field:has(input.invalid:invalid)::after {
   font-size: 0.75rem;
   color: hsl(0, 100%, 66%);
   margin-top: -.5rem;

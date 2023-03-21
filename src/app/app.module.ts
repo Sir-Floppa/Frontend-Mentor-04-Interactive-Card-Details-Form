@@ -8,6 +8,7 @@ import { CardFormComponent } from './card-form/card-form.component';
 import { CardFrontComponent } from './card-front/card-front.component';
 import { CreditCardNumberPipe } from './credit-card-number.pipe';
 import { CardBackComponent } from './card-back/card-back.component';
+import { SuccessScreenComponent } from './success-screen/success-screen.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CardBackComponent } from './card-back/card-back.component';
     CardFormComponent,
     CardFrontComponent,
     CreditCardNumberPipe,
-    CardBackComponent
+    CardBackComponent,
+    SuccessScreenComponent
   ],
   imports: [
     BrowserModule,

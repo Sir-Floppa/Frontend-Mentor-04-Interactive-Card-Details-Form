@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Card } from '../card';
 import { CardDataService } from '../card-data.service';
 
@@ -8,7 +9,10 @@ import { CardDataService } from '../card-data.service';
   styleUrls: ['./card-form.component.scss'],
 })
 export class CardFormComponent implements OnInit {
-  constructor(private cardData: CardDataService) { }
+  constructor(
+    private cardData: CardDataService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     const inputs = document.querySelectorAll('input');
@@ -105,4 +109,8 @@ export class CardFormComponent implements OnInit {
     }
     return str;
   };
+
+  public navigateToSuccess() {
+    this.router.navigate(['success']);
+  }
 }

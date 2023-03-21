@@ -6,19 +6,22 @@ main, section {
 }
 
 main {
-  width: 85%
+  justify-self: center;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 section {
   flex-direction: column;
   gap: 1.5rem;
-  width: 60%;
-  padding-left: 5%;
-  padding-right: 10%;
+  width: 30%;
 }
 
 app-card-front {
   align-self: flex-start;
+}
+app-card-back {
+  align-self: flex-end;
 }
 
 app-card-front, app-card-back {

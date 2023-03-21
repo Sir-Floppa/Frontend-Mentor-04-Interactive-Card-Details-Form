@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" (submit)="navigateToSuccess()" [noValidate]="false">
   <div class="field">
     <label for="cardholderName">Cardholder Name</label>
     <input
@@ -8,7 +8,7 @@
       name="cardholderName"
       placeholder="e.g. Jane Appleseed"
       maxlength="32"
-      required
+      [required]="true"
     />
   </div>
 
@@ -21,10 +21,10 @@
       id="cardNumber"
       name="cardNumber"
       placeholder="e.g. 1234 5678 9123 0000"
-      required
       pattern="\d{4} \d{4} \d{4} \d{4}"
       maxlength="19"
       minlength="19"
+      [required]="true"
     />
   </div>
 
@@ -41,7 +41,7 @@
           placeholder="MM"
           minlength="2"
           maxlength="2"
-          required
+          [required]="true"
         />
         <input
           [(ngModel)]="expYear"
@@ -52,7 +52,7 @@
           id="expYear"
           name="expYear"
           placeholder="YY"
-          required
+          [required]="true"
         />
       </div>
     </div>
@@ -69,10 +69,10 @@
         id="cvc"
         name="cvc"
         placeholder="e.g. 123"
-        required
+        [required]="true"
       />
     </div>
   </div>
 
-  <button>Confirm</button>
+  <button type="submit">Confirm</button>
 </form>
