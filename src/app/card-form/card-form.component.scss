@@ -87,3 +87,10 @@ button {
 .invalid:invalid {
   border: 0.125rem solid hsl(0, 100%, 66%);
 }
+
+.field:has(input.invalid)::after {
+  font-size: 0.75rem;
+  color: hsl(0, 100%, 66%);
+  margin-top: -.5rem;
+  content: "Can't be blank";
+}
