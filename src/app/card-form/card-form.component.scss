@@ -44,17 +44,6 @@ input::-webkit-outer-spin-button {
   display: none;
 }
 
-button {
-  height: 3rem;
-  padding: 0.75rem;
-  border: none;
-  color: white;
-  background-color: hsl(278, 68%, 11%);
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 .field {
   display: flex;
   flex-direction: column;
