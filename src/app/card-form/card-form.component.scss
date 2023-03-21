@@ -83,3 +83,13 @@ input::-webkit-outer-spin-button {
   margin-top: -.5rem;
   content: "Can't be blank";
 }
+
+@media (max-width: 1100px) {
+  label {
+    font-size: .75rem;
+  }
+
+  .field {
+    gap: .5rem
+  }
+}
